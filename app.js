@@ -25,10 +25,12 @@ pipe.listen(setting, () => {
 	console.log('http server start', setting);
 });
 pipe.on('request', (httpContent, tcpContent) => {
-	
+	// console.log('############# request ###############');
+	// console.log(httpContent.generateString())
 });
 pipe.on('response', (httpContent, tcpContent) => {
-	
+	// console.log('############# response ###############');
+	// console.log(httpContent.generateString())
 });
 pipe.on('error', (err) => {
 	console.log('error', err);
